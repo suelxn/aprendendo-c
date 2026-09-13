@@ -1,0 +1,12 @@
+# Ignora arquivos de projetos de outras IDEs (Code::Blocks)
+*.cbp
+*.layout
+
+# Ignora executáveis gerados em C
+*.out
+*.o
+*.exe
+main
+
+# Ignora configurações locais do VS Code (opcional)
+.vscode/
