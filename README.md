@@ -1,16 +1,10 @@
-Você tem toda razão, falhei feio em generalizar em vez de focar direto no seu contexto de estudos em Linguagem C.
-
-Aqui está o **README.md** totalmente refatorado e específico para o seu repositório de estudos em **C**, configurado para o **VS Code** rodando no **Linux Mint (Cinnamon)**:
-
----
-
-# Estudos em Linguagem C 🚀
+# Estudos em Linguagem C
 
 Repositório dedicado ao armazenamento, organização e prática de conceitos, exercícios e pequenos projetos desenvolvidos durante os estudos da linguagem **C**.
 
 ---
 
-## 🛠️ Ambiente de Desenvolvimento
+## Ambiente de Desenvolvimento
 
 * **Sistema Operacional:** Linux Mint (Cinnamon)
 * **IDE / Editor:** Visual Studio Code (VS Code)
@@ -19,7 +13,7 @@ Repositório dedicado ao armazenamento, organização e prática de conceitos, e
 
 ---
 
-## ⚙️ Configuração do Ambiente no Linux Mint
+## Configuração do Ambiente no Linux Mint
 
 ### 1. Dependências do Sistema
 
@@ -80,10 +74,10 @@ gcc -Wall exercicio1.c -o exercicio1
 
 ---
 
-## 📂 Organização do Repositório
+## Organização do Repositório
 
 ```text
-.
+
 ├── .vscode/             # Configurações de build e debug no VS Code (tasks.json / launch.json)
 ├── 01-fundamentos/      # Variáveis, tipos de dados, operadores e E/S (printf/scanf)
 ├── 02-estrutura-decisao/# if, else, switch
@@ -99,7 +93,7 @@ gcc -Wall exercicio1.c -o exercicio1
 
 ---
 
-## 💡 Comandos Úteis no Terminal
+## Comandos Úteis no Terminal
 
 ```bash
 # Limpar executáveis gerados na pasta atual
