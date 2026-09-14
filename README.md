@@ -31,7 +31,7 @@ sudo apt install build-essential gdb code -y
 Abra o VS Code (`Ctrl + Shift + X`) e instale:
 
 * **C/C++** (Microsoft)
-* **Code Runner Run**
+* **Code Runner**
 
 ---
 
@@ -78,18 +78,18 @@ gcc -Wall exercicio1.c -o exercicio1
 
 ```text
 
-├── .vscode/             # Configurações de build e debug no VS Code (tasks.json / launch.json)
-├── 01-fundamentos/      # Variáveis, tipos de dados, operadores e E/S (printf/scanf)
-├── 02-estrutura-decisao/# if, else, switch
-├── 03-laços/            # for, while, do-while
-├── 04-vetores-matrizes/ # Arrays unidimensionais e bidimensionais
-├── 05-ponteiros/        # Aritmética de ponteiros, alocação dinâmica (malloc/free)
-├── 06-estruturas/       # Structs, typedef e unicos
+├── 01-tipos-operadores/ # Variáveis, tipos de dados e operadores
+├── 02-entrada-saida/    # Entrada e saída de dados (printf/scanf)
+├── 03-decisao/          # if, else, switch
+├── 04-repeticao/        # for, while, do-while
+├── 05-vetores-matrizes/ # Arrays unidimensionais e bidimensionais
 ├── main.c               # Arquivo principal para anotações rápidas, rascunhos e testes pontuais
-├──.gitignore            # Arquivo de regras para evitar o envio de executáveis e arquivos temporários
+├── .gitignore           # Arquivo de regras para evitar o envio de executáveis e arquivos temporários
 └── README.md            # Documentação do repositório
 
 ```
+
+> **Nota:** ao compilar qualquer arquivo `.c` (ex: `gcc -Wall main.c -o main` ou `gcc -Wall exercicios.c -o exercicios`), é gerado um executável binário correspondente. Esses executáveis não são versionados no Git (ver `.gitignore`) e podem ser apagados e regerados a qualquer momento.
 
 ---
 
@@ -97,10 +97,10 @@ gcc -Wall exercicio1.c -o exercicio1
 
 ```bash
 # Limpar executáveis gerados na pasta atual
-rm -f *.out *.exe exercicio1
+rm -f *.out *.exe exercicio
 
 # Verificar vazamento de memória com Valgrind (opcional)
 sudo apt install valgrind -y
-valgrind --leak-check=full ./exercicio1
+valgrind --leak-check=full ./exercicio
 
 ```
