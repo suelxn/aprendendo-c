@@ -3,34 +3,21 @@
 
 #include <stdio.h>
 int main() {
-    int dia;
-    printf("Digite um número de 1 a 7: ");
-    scanf("%d", &dia);
+    int numero;
+    int i;
 
-    switch (dia) {
-        case 1:
-            printf("Domingo\n");
-            break;
-        case 2:
-            printf("Segunda-feira\n");
-            break;
-        case 3:
-            printf("Terça-feira\n");
-            break;
-        case 4:
-            printf("Quarta-feira\n");
-            break;
-        case 5:
-            printf("Quinta-feira\n");
-            break;
-        case 6:
-            printf("Sexta-feira\n");
-            break;
-        case 7:
-            printf("Sábado\n");
-            break;
-        default:
-            printf("Número inválido\n");
+    printf("Digite um número: ");
+    fflush(stdout); // força a exibição do prompt antes de ler a entrada
+    scanf("%d", &numero);
+
+    for (i = 1; i <= 10; i++) {
+        
+        printf("%d x %d = %d\n",
+            numero,
+            i,
+            numero * i);
     }
+
     return 0;
+
 }
