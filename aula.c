@@ -1,3 +1,5 @@
+// Anotações e testes rápidos realizados durante a aula de Introdução a C
+
 #include <stdio.h>
 #include <stdio.h>
 #include <stdbool.h> // biblioteca para trabalhar com true, false e bool

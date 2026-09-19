@@ -78,18 +78,54 @@ gcc -Wall exercicio1.c -o exercicio1
 
 ```text
 
-├── 01-tipos-operadores/ # Variáveis, tipos de dados e operadores
-├── 02-entrada-saida/    # Entrada e saída de dados (printf/scanf)
-├── 03-decisao/          # if, else, switch
-├── 04-repeticao/        # for, while, do-while
-├── 05-vetores-matrizes/ # Arrays unidimensionais e bidimensionais
-├── main.c               # Arquivo principal para anotações rápidas, rascunhos e testes pontuais
-├── .gitignore           # Arquivo de regras para evitar o envio de executáveis e arquivos temporários
-└── README.md            # Documentação do repositório
+├── 01-tipos-operadores/  # Variáveis, tipos de dados e operadores
+├── 02-entrada-saida/     # Entrada e saída de dados (printf/scanf)
+├── 03-decisao/           # if, else, switch
+├── 04-repeticao/         # for, while, do-while
+├── 05-vetores-matrizes/  # Arrays unidimensionais e bidimensionais
+├── desafios/             # Exercícios práticos numerados, um por subpasta
+│   ├── 01-antecessor-sucessor/
+│   ├── 02-dobro-triplo-metade/
+│   ├── ...
+│   └── 13-contagem-regressiva/
+├── sistema_pagamento/    # Mini-projeto de exemplo sobre modularização (ver seção abaixo)
+├── aula.c                # Anotações e códigos de apoio usados durante as aulas
+├── estrutura-base.c      # Modelo/esqueleto inicial para começar um novo exercício
+├── main.c                # Arquivo principal para anotações rápidas, rascunhos e testes pontuais
+├── .gitignore            # Arquivo de regras para evitar o envio de executáveis e arquivos temporários
+└── README.md             # Documentação do repositório
 
 ```
 
 > **Nota:** ao compilar qualquer arquivo `.c` (ex: `gcc -Wall main.c -o main` ou `gcc -Wall exercicios.c -o exercicios`), é gerado um executável binário correspondente. Esses executáveis não são versionados no Git (ver `.gitignore`) e podem ser apagados e regerados a qualquer momento.
+
+---
+
+## Modularização: `sistema_pagamento/`
+
+A pasta `sistema_pagamento/` é um exemplo de como separar um programa em **módulos**, em vez de colocar tudo em um único arquivo `.c`. A ideia é dividir responsabilidades:
+
+```text
+
+sistema_pagamento/
+├── main.c          # Ponto de entrada: só cuida da interação com o usuário
+│                    # (ler dados, chamar as funções e exibir o resultado)
+├── pagamento.h      # Interface do módulo: declara os protótipos das funções,
+│                    # servindo de "contrato" entre main.c e pagamento.c
+└── pagamento.c      # Implementação do módulo: contém a lógica de negócio
+                     # (cálculo de desconto, cálculo do total, etc.)
+
+```
+
+Essa separação entre **interface (`.h`)** e **implementação (`.c`)** é a base da modularização em C: `main.c` conhece apenas as funções declaradas em `pagamento.h`, sem precisar saber como elas foram implementadas. Isso facilita manutenção, reuso e testes de cada módulo isoladamente.
+
+Para compilar um projeto com múltiplos arquivos como este, é preciso incluir todos os `.c` envolvidos no comando do `gcc`:
+
+```bash
+gcc -Wall sistema_pagamento/main.c sistema_pagamento/pagamento.c -o sistema_pagamento/sistema_pagamento
+./sistema_pagamento/sistema_pagamento
+
+```
 
 ---
 
