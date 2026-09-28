@@ -1,41 +1,52 @@
 // Anotações e testes rápidos realizados durante a aula de Introdução a C
-
+/*
 #include <stdio.h>
-#include <stdio.h>
-#include <stdbool.h> // biblioteca para trabalhar com true, false e bool
+#include <stdbool.h>
 
-void exibirMenu() {
-    printf("Caixa eletronico");
-    printf("1 - Consultar saldo /n");
-    printf("2 - Depositar /n");
-    printf("3 - Sacar /n");
-    printf("4 - Sair /n");
-    printf("Escolha: /n");
+int main (){
+    int vetor[5] = {10, 20, 30, 40, 50};
+    int numero;
+    bool encontrado = false;
 
+    printf("Digite um numero: ");
+    scanf("%d", &numero);
 
-int main() {
-    int opcao;
-    float saldo = 1000.00;
-    float valor;
-
-    do {
-        exibirMenu
-        scanf("%d", &opcao)
-        switch ((opcao))
-        {
-        case 1:
-            printf("")
+    for(int i = 0; i < 5; i++) {
+        if(vetor[i] == numero) {
+            encontrado = true;
             break;
-        
-        default:
-            break;
+
         }
-
     }
 
-
+if (encontrado) {
+    printf("O número %d está presente no vetor.\n", numero);
+} else {
+    printf("O número %d não está presente no vetor.\n", numero);
 }
 
-}
+return 0;
 
+}
+*/
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main(){
+    int vetor [5];
+
+    printf("Insira os elementos do vetor: \n");
+
+    // Preenchendo o vetor com valores fornecidos pelo usuário
+    for (int i = 0; i < 5; i++) {
+        printf("Elemento %d: \n",  i+1);
+        scanf("%d", &vetor[i]);
+    }
+    printf("Vetor inserido pelo usuário: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d\n", vetor[i]);
+    }
+    return 0;
+}
 
