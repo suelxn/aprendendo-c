@@ -38,13 +38,7 @@ gdb --version
 
 Abra o **PowerShell** (menu Iniciar → digite `PowerShell`) para os comandos `winget` abaixo.
 
-#### 1. Instalar o VS Code
-
-```powershell
-winget install Microsoft.VisualStudioCode
-```
-
-#### 2. Instalar o MSYS2
+#### 1. Instalar o MSYS2
 
 ```powershell
 winget install MSYS2.MSYS2
@@ -52,7 +46,7 @@ winget install MSYS2.MSYS2
 
 Por padrão, o MSYS2 é instalado em `C:\msys64`.
 
-#### 3. Instalar o GCC e o GDB pelo MSYS2
+#### 2. Instalar o GCC e o GDB pelo MSYS2
 
 1. Abra o **MSYS2** pelo menu Iniciar.
 2. No terminal do MSYS2, execute o comando abaixo para instalar o GCC (compilador de C) e o GDB (depurador):
@@ -61,7 +55,7 @@ Por padrão, o MSYS2 é instalado em `C:\msys64`.
     pacman -S --noconfirm mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-gdb
     ```
 
-#### 4. Adicionar o compilador ao PATH
+#### 3. Adicionar o compilador ao PATH
 
 1. Pesquise por **"Editar as variáveis de ambiente do sistema"** no menu Iniciar e clique em **Variáveis de Ambiente**.
 2. Em **Variáveis de usuário**, selecione `Path` e clique em **Editar**.
@@ -73,7 +67,7 @@ Por padrão, o MSYS2 é instalado em `C:\msys64`.
 
 4. Confirme em **OK** nas janelas abertas.
 
-#### 5. Verificar a instalação
+#### 4. Verificar a instalação
 
 > As variáveis de ambiente só são carregadas em terminais novos. Feche e abra o PowerShell (e o VS Code, se estiver aberto) antes de testar.
 
@@ -102,7 +96,7 @@ Abra o VS Code (`Ctrl + Shift + X`) e instale, em ambos os sistemas:
 No Linux Mint, navegue até a pasta do projeto e abra diretamente no VS Code:
 
 ```bash
-cd caminho/para/estudos-c
+cd caminho/para/aprendendo-c
 code .
 ```
 
@@ -191,7 +185,7 @@ A pasta `sistema_pagamento/` é um exemplo de como separar um programa em **mód
 ```text
 
 sistema_pagamento/
-├── main.c          # Ponto de entrada: só cuida da interação com o usuário
+├── main.c           # Ponto de entrada: só cuida da interação com o usuário
 │                    # (ler dados, chamar as funções e exibir o resultado)
 ├── pagamento.h      # Interface do módulo: declara os protótipos das funções,
 │                    # servindo de "contrato" entre main.c e pagamento.c
