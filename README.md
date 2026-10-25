@@ -153,6 +153,7 @@ Esse fluxo é o mesmo nos dois sistemas, desde que o `gcc` e o `gdb` estejam no 
 
 ```text
 
+├── 00-bibliotecas/       # Lista de bibliotecas de C
 ├── 01-tipos-operadores/  # Variáveis, tipos de dados e operadores
 ├── 02-entrada-saida/     # Entrada e saída de dados (printf/scanf)
 ├── 03-decisao/           # if, else, switch
