@@ -1,3 +1,5 @@
+// Comentário
+
 #include <stdio.h>
 
 int main (){
