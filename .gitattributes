@@ -1,0 +1,156 @@
+# ==========================================
+# Configuração Padrão Universal
+# ==========================================
+# Trata todos os arquivos como texto por padrão e converte para LF no repositório
+* text=auto
+
+# ==========================================
+# Linguagens de Programação (Código e Headers)
+# ==========================================
+
+# C / C++
+*.c text eol=lf
+*.h text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.cc text eol=lf
+*.cxx text eol=lf
+*.ino text eol=lf
+
+# C# / .NET
+*.cs text eol=lf
+*.fs text eol=lf
+*.vb text eol=lf
+
+# Java / JVM (Kotlin, Scala, Groovy)
+*.java text eol=lf
+*.kt text eol=lf
+*.kts text eol=lf
+*.scala text eol=lf
+*.groovy text eol=lf
+
+# Python
+*.py text eol=lf
+*.pyw text eol=lf
+*.pyx text eol=lf
+
+# JavaScript / TypeScript / Web
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.jsx text eol=lf
+*.vue text eol=lf
+*.svelte text eol=lf
+
+# PHP
+*.php text eol=lf
+*.phtml text eol=lf
+
+# Ruby
+*.rb text eol=lf
+*.rake text eol=lf
+
+# Go (Golang)
+*.go text eol=lf
+
+# Rust
+*.rs text eol=lf
+
+# Swift / Objective-C
+*.swift text eol=lf
+*.m text eol=lf
+*.mm text eol=lf
+
+# Lua
+*.lua text eol=lf
+
+# Dart / Flutter
+*.dart text eol=lf
+
+# R / MATLAB / Julia
+*.r text eol=lf
+*.R text eol=lf
+*.m text eol=lf
+*.jl text eol=lf
+
+# Shell / Scripts Unix
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.fish text eol=lf
+
+# ==========================================
+# Web e Estilização
+# ==========================================
+*.html text eol=lf
+*.htm text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.sass text eol=lf
+*.less text eol=lf
+*.svg text eol=lf
+
+# ==========================================
+# Dados, Configuração e Documentação
+# ==========================================
+*.json text eol=lf
+*.jsonc text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.xml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.conf text eol=lf
+*.properties text eol=lf
+*.env.example text eol=lf
+*.md text eol=lf
+*.rst text eol=lf
+*.txt text eol=lf
+LICENSE text eol=lf
+Makefile text eol=lf
+*.mk text eol=lf
+Dockerfile text eol=lf
+Vagrantfile text eol=lf
+
+# ==========================================
+# Sistemas Operacionais e Específicos
+# ==========================================
+
+# Mantém arquivos de lote do Windows com CRLF (necessário para o Windows executar corretamente)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=lf
+
+# ==========================================
+# Arquivos Binários (Ignoram conversão de texto)
+# ==========================================
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.pdf binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.rar binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.class binary
+*.jar binary
+*.war binary
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
