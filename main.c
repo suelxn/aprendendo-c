@@ -1,7 +1,10 @@
 // Arquivo de anotações e testes rápidos: usado para rascunhos, experimentos
 // e pequenos trechos de código pontuais durante os estudos de C.
 
+
+
 #include <stdio.h>
+
 int main() {
     int numero;
     int i;
