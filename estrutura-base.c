@@ -1,4 +1,5 @@
 // Comentário
+// Pular linha: \n
 
 #include <stdio.h>
 
