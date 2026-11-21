@@ -8,6 +8,11 @@
 *.exe
 main
 exercicios
+aula
+*-desafio
+*-revisao
+pagamento
+calculadora
 
 # Ignora configurações locais do VS Code (opcional)
 .vscode/

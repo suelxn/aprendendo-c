@@ -139,6 +139,12 @@ gcc -Wall exercicio1.c -o exercicio1
 
 > A flag `-Wall` ativa todos os alertas do compilador, ajudando a identificar boas práticas e vazamentos de memória logo no desenvolvimento.
 
+> **Atenção (Linux Mint):** se o programa usa funções de `math.h` (como `sqrt`, `pow`, `round`, `floor` e `ceil`), inclua `-lm` no **fim** do comando de compilação:
+>
+> ```bash
+> gcc -Wall exercicio1.c -o exercicio1 -lm
+> ```
+
 #### Opção B: Usando a Configuração Automática do VS Code (`F5`)
 
 1. Abra qualquer arquivo `.c` (exemplo: `main.c`).
@@ -146,6 +152,18 @@ gcc -Wall exercicio1.c -o exercicio1
 3. Selecione a opção **C++ (GDB/LLDB)** e escolha **gcc - Build and debug active file**.
 
 Esse fluxo é o mesmo nos dois sistemas, desde que o `gcc` e o `gdb` estejam no PATH (ver as seções de instalação acima).
+
+#### Opção C: Pelo Code Runner (`Ctrl + Alt + N`) — somente Linux Mint
+
+Com a extensão **Code Runner** instalada, o atalho `Ctrl + Alt + N` compila e executa o arquivo `.c` aberto. Para que as funções de `math.h` funcionem, adicione o `-lm` ao comando do Code Runner no `settings.json` do VS Code:
+
+```json
+"code-runner.executorMap": {
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt -lm && $dir$fileNameWithoutExt"
+}
+```
+
+> O Code Runner compila somente o arquivo aberto. Projetos com vários arquivos `.c` (como `sistema_pagamento/`) precisam ser compilados pelo terminal, conforme as seções abaixo.
 
 ---
 
@@ -163,20 +181,25 @@ Esse fluxo é o mesmo nos dois sistemas, desde que o `gcc` e o `gdb` estejam no 
 │   ├── 01-antecessor-sucessor/
 │   ├── 02-dobro-triplo-metade/
 │   ├── ...
-│   └── 13-contagem-regressiva/
+│   └── 30-jogo-advinhacao/
 ├── desafios-02/          # 20 Exercícios aplicados a cenários do mundo real
+│   ├── 01-sim-salario-liq/
+│   ├── ...
+│   ├── 13-sist-pag-mod/              # Projeto com vários arquivos (main.c, pagamento.c, pagamento.h)
+│   ├── 14-calculadora-modular/       # Projeto com vários arquivos (main.c, calculadora.c, calculadora.h)
+│   └── 20-painel-simp-estac/
+├── revisao-av/           # Exercício de revisão: leitura de um vetor de 10 posições
 ├── sistema_pagamento/    # Mini-projeto de exemplo sobre modularização (ver seção abaixo)
 ├── aula.c                # Anotações e códigos de apoio usados durante as aulas
 ├── estrutura-base.c      # Modelo/esqueleto inicial para começar um novo exercício
 ├── main.c                # Arquivo principal para anotações rápidas, rascunhos e testes pontuais
 ├── .gitattributes        # Padroniza o comportamento do Git entre diferentes sistemas operacionais (Windows 11 e Linux).
-├── .gitignore            # Arquivo de regras para evitar o envio de executáveis e arquivos temporários
+├── .gitignore            # Arquivo de regras para ignorar arquivos temporários e de IDEs (ex: `*.out`, `*.exe`)
 └── README.md             # Documentação do repositório
 
 ```
 
-> **Nota:** ao compilar qualquer arquivo `.c` (ex: `gcc -Wall main.c -o main` ou `gcc -Wall exercicios.c -o exercicios`), é gerado um executável binário correspondente. No Windows, esse executável recebe a extensão `.exe`. Esses executáveis não são versionados no Git (ver `.gitignore`) e podem ser apagados e regerados a qualquer momento.
-
+> **Nota:** ao compilar qualquer arquivo `.c` (ex: `gcc -Wall main.c -o main` ou `gcc -Wall exercicios.c -o exercicios`), é gerado um executável binário correspondente. No Windows, esse executável recebe a extensão `.exe`. Os executáveis **não são enviados ao repositório**: o `.gitignore` os ignora, por isso, ao clonar o projeto, é preciso compilar novamente os programas que quiser executar.
 ---
 
 ## Modularização: `sistema_pagamento/`
@@ -211,6 +234,18 @@ gcc -Wall sistema_pagamento/main.c sistema_pagamento/pagamento.c -o sistema_paga
 ```powershell
 gcc -Wall sistema_pagamento/main.c sistema_pagamento/pagamento.c -o sistema_pagamento/sistema_pagamento
 .\sistema_pagamento\sistema_pagamento.exe
+```
+
+Os projetos com vários arquivos da pasta `desafios-02/` seguem a mesma regra (Linux Mint):
+
+```bash
+# 13-sist-pag-mod: main.c + pagamento.c
+gcc -Wall desafios-02/13-sist-pag-mod/main.c desafios-02/13-sist-pag-mod/pagamento.c -o desafios-02/13-sist-pag-mod/pagamento
+./desafios-02/13-sist-pag-mod/pagamento
+
+# 14-calculadora-modular: main.c + calculadora.c
+gcc -Wall desafios-02/14-calculadora-modular/main.c desafios-02/14-calculadora-modular/calculadora.c -o desafios-02/14-calculadora-modular/calculadora
+./desafios-02/14-calculadora-modular/calculadora
 ```
 
 ---
