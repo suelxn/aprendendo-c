@@ -1,2 +1,6 @@
-#include <stdio.h>
-#include <math.h>
+#include <stdio.h>   // Entrada e saída de dados (ex: printf, scanf)
+#include <math.h>    // Funções matemáticas (ex: sqrt, pow, sin, cos)
+#include <stdlib.h>  // Utilitários gerais: alocação de memória, conversão e aleatoriedade (ex: malloc, rand, exit)
+#include <stdbool.h> // Suporte ao tipo booleano (bool, true, false)
+#include <ctype.h>   // Classificação e conversão de caracteres (ex: isdigit, toupper, tolower)
+#include <time.h>    // Manipulação de data e hora (ex: time, usada como semente no srand)
